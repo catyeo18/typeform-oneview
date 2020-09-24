@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Tablist</title>
+	<style>
+		body {
+			margin: 0;
+			width: 424px;
+			height: 300px;
+			display: flex;
+			flex-direction: column;
+			font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Ubuntu, Arial, sans-serif;
+		}
+		.textarea {
+			overflow-x: scroll;
+			overflow-y: scroll;
+			flex: 1;
+			font-size: 14px;
+			padding: 12px;
+			color: #222;
+			white-space: nowrap;
+
+			width: 100%;
+			outline: 0;
+			border: 0;
+		}
+		button {
+			border: 0;
+			width: 100%;
+			color: #222;
+			font-size: 13px;
+			font-weight: bold;
+			border-top: 1px solid #dfdfdf;
+			text-transform: uppercase;
+			background: #f7f7f7;
+			cursor: pointer;
+			padding: 12px;
+			outline: 0;
+		}
+		button:hover {
+			background: #f0f0f0;
+		}
+		button:active {
+			background: #e0e0e0;
+		}
+		.nav {
+			display: flex;
+			padding: 12px;
+		}
+		.nav-item {
+			font-size: 14px;
+			font-weight: 700;
+			margin-right: 8px;
+			cursor: pointer;
+			color: #000;
+		}
+		.nav-item:hover {
+			color: #222;
+		}
+	</style>	
+</head>
+<body>
+
+	<div class="nav">
+		<div class="nav-item" id="nav-curr">current window</div>
+		<div class="nav-item" id="nav-all">all windows</div>
+	</div>
+
+	<div class="textarea" id="textarea" contenteditable="true"></div>
+	<button id="copy-window-btn">Copy</button>
+	<script src="popup.js"></script>
+</body>
+</html>
